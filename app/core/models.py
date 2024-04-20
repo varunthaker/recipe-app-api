@@ -23,8 +23,6 @@ class UserManager(BaseUserManager):
 
         return user
 
-
-
 class User(AbstractBaseUser, PermissionsMixin):
 
     #abstract for authentication feat
