@@ -6,6 +6,7 @@ from core.models import Youth
 from youth import serializers
 
 class YouthViewSet(viewsets.ModelViewSet):
+    """Manage youths"""
     serializer_class = serializers.YouthSerializer
     queryset = Youth.objects.all()
     authentication_classes = [TokenAuthentication]

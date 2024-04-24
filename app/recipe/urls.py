@@ -5,7 +5,7 @@ from recipe import views
 
 router=DefaultRouter()
 
-router.register('recipe', views.RecipeViewSets)
+router.register('receipes', views.RecipeViewSets)
 app_name = 'recipe'
 
 urlpatterns = [

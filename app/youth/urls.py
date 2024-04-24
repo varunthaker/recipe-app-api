@@ -4,7 +4,7 @@ from youth import views
 
 router = DefaultRouter()
 
-router.register('youth', views.YouthViewSet)
+router.register('youths', views.YouthViewSet)
 app_name = 'youth'
 
 urlpatterns = [
