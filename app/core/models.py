@@ -52,18 +52,3 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.title
-
-class Youth(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    email = models.EmailField()
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    birth_date = models.DateField(auto_now_add=True)
-    from_city_germany = models.CharField(max_length=50)
-    from_city_india = models.CharField(max_length=50)
-    phone_number = models.CharField(max_length=50)
-    # followup_sevak = models.OneToOneField()
-    sabha_type = models.CharField(max_length=50)
-    
-    def __str__(self):
-        return self.first_name

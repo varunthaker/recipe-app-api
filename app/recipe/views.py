@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from core.models import Recipe
 from recipe import serializers
 
-class RecipeViewSets(viewsets.ModelViewSet):
+class RecipeViewSet(viewsets.ModelViewSet):
     """Manage Receipe"""
     serializer_class = serializers.RecipeDetailSerializer
     queryset = Recipe.objects.all()

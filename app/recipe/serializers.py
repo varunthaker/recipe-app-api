@@ -2,7 +2,7 @@ from rest_framework import serializers
 from core.models import Recipe
 
 
-class RecipeSerializer(serializers.Serializer):
+class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
         fields = ['id', 'title', 'link','time_minutes', 'price']
@@ -10,4 +10,4 @@ class RecipeSerializer(serializers.Serializer):
 
 class RecipeDetailSerializer(RecipeSerializer):
     class Meta(RecipeSerializer.Meta):
-        fiels = RecipeSerializer.Meta.fields + ['description']
+        fields = RecipeSerializer.Meta.fields + ['description']
